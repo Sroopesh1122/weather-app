@@ -34,7 +34,7 @@ const MainDashboard = () => {
             <div className={`min-h-[90vh] ${getBackgroud(theme)}`}>
                 <MobileNavbar />
                 <section className='max-w-7xl mx-auto p-3'>
-                    <div className='flex justify-between gap-22 flex-col md:flex-row '>
+                    <div className='flex justify-between  flex-col gap-3 md:flex-row '>
                         <TeampDetailsCard />
                         {/* details */}
                         <div className='flex flex-1 px-10 ml-0 gap-8 md:ml-4  justify-start card items-center overflow-x-auto cards-wrapper'>
