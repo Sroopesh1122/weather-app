@@ -11,7 +11,7 @@ const UnitSelect = () => {
     <div className='mr-4 text-black'>
        <div className='flex gap-1'>
         <p>Unit</p>
-        <select className='unit-selector rounded-md' name="" id="" value={unit} onChange={(e)=>setUnit(e.target.value)}>
+        <select className='unit-selector rounded-md' name="" id=""  onChange={(e)=>setUnit(e.target.value)}>
              {
                 unitData.map((data,idx)=><option key={idx} value={data.sys}  selected ={data.sys === unit } >{data.name}</option> )
              }

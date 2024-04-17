@@ -31,9 +31,6 @@ function App(props:AppProps) {
 
   const [weatherData, setWeatherData] = useState<WeatherForecast>({} as WeatherForecast)
 
-  // const intervalHook = useInterval()
-
-
 
   const { setLoading, isLoading } = useLoading()
 
@@ -46,10 +43,11 @@ function App(props:AppProps) {
       {
         try {
           setLoading(true)
-          const res = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=9046d2f04ae04131fb68ce0fa819744e`) 
+          const res = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=9046d2f04ae04131fb68ce0fa819744e`)  
          setUnit({lat:lat,lon:lon})
           return res.data
         } catch (error: any) {
+          
           throw new Error(error)
         }
         finally {
