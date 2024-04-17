@@ -28,10 +28,10 @@ const Forecast = (props: ForecastProps) => {
                     </div>
                     <p className='text-[0.9rem] whitespace-nowrap'>Feels like {getTemperatue(props.data.main.feels_like||273,unit)}&deg;{unit}</p>
                 </div>
-                <div className='carousal-wrapper flex justify-evenly md:ms-4   items-center  gap-10 ms-0  px-4 py-2 overflow-x-auto'>
+                <div className='carousal-wrapper flex my-4 gap-8 px-3 overflow-x-auto md:ms-8'>
                   <SubContent title={'Visibility'} icon={<IoEyeOutline className='text-2xl' />} value={getVisibility(props.data.visibility || 1000)+'km'}/>
                   <SubContent title={'Humidity'} icon={<WiHumidity className='text-3xl' />} value={props.data.main.humidity.toFixed(2) + '%'}/>
-                  <SubContent title={'WindSpped'} icon={<MdWindPower className='text-2xl' />} value={getWind(props.data.wind.speed)+'km/h'}/>
+                  <SubContent title={'WindSpeed'} icon={<MdWindPower className='text-2xl' />} value={getWind(props.data.wind.speed)+'km/h'}/>
                   <SubContent title={'Air Pressure'} icon={<FaTachometerAlt className='text-2xl' />} value={props.data.main.pressure.toFixed(2)+'hPa'}/>
                   <SubContent title={'Sunrise'} icon={<FiSunrise className='text-2xl' />} value={getTime(props.sunrise || 123321)}/>
                   <SubContent title={'Sunset'} icon={<FiSunset className='text-2xl' />} value={getTime(props.sunset || 123321)}/>
